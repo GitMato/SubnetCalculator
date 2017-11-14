@@ -15,4 +15,4 @@ Entering second IP/Mask and pressing 'Calc' will let you to use the program as l
 You can press 'Exit' -button to end the program.
 
 In error situations you'll get a text 'Unexpected error. Please, check your input.'
-Usually this is due an invalid IPv4 address or input error(typo).
+Usually this is due to an invalid IPv4 address or input error(typo).
