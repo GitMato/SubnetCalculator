@@ -88,11 +88,9 @@ class Kayttoliittyma:
     def ShowHosts(self, network, maskInt):
         # Calculate available hosts
 
-        # list of all available hosts
-        availableHosts = list(network.hosts())
+        firstHost = network.network_address +1;
+        lastHost = network.broadcast_address -1;
 
-        firstHost = availableHosts[0]
-        lastHost = availableHosts[len(availableHosts)-1]
         if (maskInt != 31) and (maskInt != 32):
 
             hosts = str(firstHost)+" - "+str(lastHost)
@@ -106,9 +104,13 @@ class Kayttoliittyma:
 
 
         else:
-            print ('Not enough room for hosts.')
+            #print ('Not enough room for hosts.')
+            self.__AvailableHosts.configure(state="normal")
+            self.__AvailableHosts.delete(0, END)
+            self.__AvailableHosts.insert(0, 'Not enough room for hosts.')
+            self.__AvailableHosts.configure(state="readonly")
 
-        availableHosts.clear()
+        #availableHosts.clear()
 
 
     def GenerateNetworkAddress(self, ipandmask):
