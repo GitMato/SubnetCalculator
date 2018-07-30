@@ -20,3 +20,5 @@ In error situations you'll get a text 'Unexpected error. Please, check your inpu
 Usually this is due an invalid IPv4 address or input error(typo).
 
 You can keep inserting IPv4 addresses and pressing 'calc' and the program will calculate proper values every time.
+
+<img title="SubnetCalculator example" src="readme/subnetcalculator.png">
